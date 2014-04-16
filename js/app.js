@@ -15,7 +15,7 @@ angular.module('app').config([
   '$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
       controller: 'ProjectIndexCtrl',
-      templateUrl: 'project.html'
+      templateUrl: '../templates/project.html'
     })
   }
 ]);
