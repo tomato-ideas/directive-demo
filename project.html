@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-6">
+    <p>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+          <ul class="dropdown-menu pull-right">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Budget</th>
+      </tr>
+      <tr ng-repeat="project in projects">
+        <td>{{ project.name }}</td>
+        <td>{{ project.budget }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
