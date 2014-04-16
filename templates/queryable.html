@@ -1,0 +1,10 @@
+<div class="input-group">
+  <div class="input-group-btn">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="text">All</span> <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="active"><a data-q="$">All</a></li>
+      <li ng-repeat="key in keys"><a data-q="{{key}}">{{key}}</a></li>
+    </ul>
+  </div>
+  <input type="text" class="form-control">
+</div>

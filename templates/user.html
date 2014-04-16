@@ -1,17 +1,6 @@
 <div class="row">
   <div class="col-xs-6">
-    <p>
-      <div class="input-group" queryable ng-model="query">
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Search <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a ng-click="changeQueryType('name')">Name</a></li>
-            <li><a ng-click="changeQueryType('age')">Age</a></li>
-          </ul>
-        </div>
-        <input type="text" class="form-control" ng-model="q" ng-change="changeQuery()">
-      </div>
-    </p>
+    <queryable keys="name,age" ng-model="query">
   </div>
 </div>
 <div class="row">
