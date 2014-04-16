@@ -1,18 +1,15 @@
 <div class="row">
-  <div class="col-xs-6 col-xs-offset-6">
+  <div class="col-xs-6">
     <p>
       <div class="input-group">
-        <input type="text" class="form-control">
         <div class="input-group-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-          <ul class="dropdown-menu pull-right">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Search <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a ng-click="changeQueryType('name')">Name</a></li>
+            <li><a ng-click="changeQueryType('budget')">Budget</a></li>
           </ul>
         </div>
+        <input type="text" class="form-control" ng-model="q" ng-change="changeQuery()">
       </div>
     </p>
   </div>
@@ -20,14 +17,18 @@
 <div class="row">
   <div class="col-xs-12">
     <table class="table">
-      <tr>
-        <th>Name</th>
-        <th>Budget</th>
-      </tr>
-      <tr ng-repeat="project in projects">
-        <td>{{ project.name }}</td>
-        <td>{{ project.budget }}</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="project in projects | filter: query">
+          <td>{{ project.name }}</td>
+          <td>{{ project.budget }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
