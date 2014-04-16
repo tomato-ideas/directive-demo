@@ -15,15 +15,5 @@ angular.module('app.controllers').controller('ProjectIndexCtrl', [
         budget: 100
       }
     ];
-
-    $scope.qType = '$';
-    $scope.changeQueryType = function (type) {
-      $scope.qType = type;
-      $scope.changeQuery();
-    };
-    $scope.changeQuery = function () {
-      $scope.query = {};
-      $scope.query[$scope.qType] = $scope.q;
-    };
   }
 ]);

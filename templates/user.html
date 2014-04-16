@@ -6,7 +6,7 @@
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Search <span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a ng-click="changeQueryType('name')">Name</a></li>
-            <li><a ng-click="changeQueryType('budget')">Budget</a></li>
+            <li><a ng-click="changeQueryType('age')">Age</a></li>
           </ul>
         </div>
         <input type="text" class="form-control" ng-model="q" ng-change="changeQuery()">
@@ -20,13 +20,13 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Budget</th>
+          <th>Age</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="project in projects | filter: query">
-          <td>{{ project.name }}</td>
-          <td>{{ project.budget }}</td>
+        <tr ng-repeat="user in users | filter: query">
+          <td>{{ user.name }}</td>
+          <td>{{ user.age }}</td>
         </tr>
       </tbody>
     </table>

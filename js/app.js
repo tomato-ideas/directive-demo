@@ -16,6 +16,11 @@ angular.module('app').config([
     $routeProvider.when('/', {
       controller: 'ProjectIndexCtrl',
       templateUrl: '../templates/project.html'
+    }),
+
+    $routeProvider.when('/users', {
+      controller: 'UserIndexCtrl',
+      templateUrl: '../templates/user.html'
     })
   }
 ]);
